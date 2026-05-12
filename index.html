@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ВкусноДома — Рецепты для каждого дня</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== ШАПКА ========== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">Вкусно<span>Дома</span></a>
+
+        <nav class="nav nav--desktop">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Главная</a></li>
+            <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+            <li><a href="account.html" class="nav__link">Кабинет</a></li>
+            <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <a href="registration.html" class="btn btn--primary hidden-mobile">Войти</a>
+          <button class="header__burger" aria-label="Меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <nav class="nav nav--mobile">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Главная</a></li>
+        <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+        <li><a href="account.html" class="nav__link">Кабинет</a></li>
+        <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__subtitle">Более 500 проверенных рецептов</p>
+        <h1 class="hero__title">Готовьте с&nbsp;удовольствием каждый день</h1>
+        <p class="hero__text">
+          Простые и вкусные блюда для всей семьи. Пошаговые инструкции,
+          фотографии и советы от настоящих кулинаров.
+        </p>
+        <div class="hero__actions">
+          <a href="recipes.html" class="btn btn--primary btn--lg">Смотреть рецепты</a>
+          <a href="registration.html" class="btn btn--outline btn--lg">Создать аккаунт</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== КАТЕГОРИИ ========== -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Разделы</p>
+        <h2 class="section__title">Выберите категорию</h2>
+        <p class="section__desc">Рецепты на любой вкус — от быстрых завтраков до праздничных блюд</p>
+      </div>
+      <div class="categories__grid">
+        <a href="recipes.html?cat=zavtrak" class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80"
+            alt="Завтраки"
+            class="category-card__img"
+          />
+          <div class="category-card__overlay"></div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Завтраки</h3>
+            <span class="category-card__count">48 рецептов</span>
+          </div>
+        </a>
+        <a href="recipes.html?cat=sup" class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80"
+            alt="Супы"
+            class="category-card__img"
+          />
+          <div class="category-card__overlay"></div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Супы</h3>
+            <span class="category-card__count">34 рецепта</span>
+          </div>
+        </a>
+        <a href="recipes.html?cat=main" class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=600&q=80"
+            alt="Основные блюда"
+            class="category-card__img"
+          />
+          <div class="category-card__overlay"></div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Основные блюда</h3>
+            <span class="category-card__count">120 рецептов</span>
+          </div>
+        </a>
+        <a href="recipes.html?cat=desert" class="category-card">
+          <img
+            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80"
+            alt="Десерты"
+            class="category-card__img"
+          />
+          <div class="category-card__overlay"></div>
+          <div class="category-card__body">
+            <h3 class="category-card__title">Десерты</h3>
+            <span class="category-card__count">87 рецептов</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ПОПУЛЯРНЫЕ РЕЦЕПТЫ ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Популярное</p>
+        <h2 class="section__title">Рецепты недели</h2>
+        <p class="section__desc">Самые популярные блюда по версии наших пользователей</p>
+      </div>
+      <div class="recipes__grid">
+        <article class="recipe-card" data-category="main">
+          <div class="recipe-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80"
+              alt="Паста карбонара"
+              class="recipe-card__img"
+            />
+            <span class="recipe-card__badge">Хит</span>
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Основные блюда</p>
+            <h3 class="recipe-card__title">Паста карбонара</h3>
+            <p class="recipe-card__desc">
+              Классический итальянский рецепт с яйцами, сыром пекорино и гуанчале.
+              Сытно и невероятно вкусно.
+            </p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#128336;</span>
+                25 мин
+              </span>
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#128100;</span>
+                2 порции
+              </span>
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#11088;</span>
+                4.9
+              </span>
+            </div>
+            <a href="recipes.html" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="sup">
+          <div class="recipe-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=600&q=80"
+              alt="Борщ классический"
+              class="recipe-card__img"
+            />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Супы</p>
+            <h3 class="recipe-card__title">Борщ классический</h3>
+            <p class="recipe-card__desc">
+              Наваристый борщ со свёклой, капустой, картофелем и мясом.
+              Подаётся с ложкой сметаны и чёрным хлебом.
+            </p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#128336;</span>
+                90 мин
+              </span>
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#128100;</span>
+                6 порций
+              </span>
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#11088;</span>
+                4.8
+              </span>
+            </div>
+            <a href="recipes.html" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="desert">
+          <div class="recipe-card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80"
+              alt="Шоколадный кекс"
+              class="recipe-card__img"
+            />
+            <span class="recipe-card__badge">Новинка</span>
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Десерты</p>
+            <h3 class="recipe-card__title">Шоколадный кекс</h3>
+            <p class="recipe-card__desc">
+              Влажный шоколадный кекс с хрустящей корочкой снаружи и нежной
+              серединой. Готовится за 40 минут.
+            </p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#128336;</span>
+                40 мин
+              </span>
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#128100;</span>
+                8 порций
+              </span>
+              <span class="recipe-card__meta-item">
+                <span class="recipe-card__meta-icon">&#11088;</span>
+                4.7
+              </span>
+            </div>
+            <a href="recipes.html" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+      </div>
+      <div class="text-center mt-32">
+        <a href="recipes.html" class="btn btn--primary btn--lg">Все рецепты</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== О НАС ========== -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="about">
+        <div class="about__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+            alt="О проекте ВкусноДома"
+            class="about__img"
+          />
+        </div>
+        <div class="about__text-block">
+          <p class="about__label">О проекте</p>
+          <h2 class="about__title">Готовим дома — это просто и вкусно</h2>
+          <p class="about__text">
+            ВкусноДома — это кулинарный сайт для тех, кто хочет готовить
+            вкусно, но без лишних сложностей. Все рецепты написаны понятным
+            языком и проверены лично.
+          </p>
+          <p class="about__text">
+            Здесь вы найдёте блюда на каждый день и для особых случаев.
+            Подробные пошаговые инструкции, реальные фотографии и честные
+            комментарии от участников сообщества.
+          </p>
+          <div class="about__stats">
+            <div>
+              <p class="about__stat-value">500+</p>
+              <p class="about__stat-label">Рецептов</p>
+            </div>
+            <div>
+              <p class="about__stat-value">12k</p>
+              <p class="about__stat-label">Пользователей</p>
+            </div>
+            <div>
+              <p class="about__stat-value">4.9</p>
+              <p class="about__stat-label">Средний рейтинг</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ОТЗЫВЫ ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Отзывы</p>
+        <h2 class="section__title">Что говорят пользователи</h2>
+      </div>
+      <div class="reviews__grid">
+        <div class="review-card">
+          <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-card__text">
+            "Нашла здесь рецепт борща, который стал любимым в семье.
+            Всё написано понятно, фотографии помогают не запутаться."
+          </p>
+          <div class="review-card__author">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+              alt="Анна Петрова"
+              class="review-card__avatar"
+            />
+            <div>
+              <p class="review-card__name">Анна Петрова</p>
+              <p class="review-card__role">Постоянный пользователь</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-card__text">
+            "Отличный сайт для начинающих. Даже сложные рецепты описаны
+            так, что с первого раза всё получается."
+          </p>
+          <div class="review-card__author">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+              alt="Дмитрий Козлов"
+              class="review-card__avatar"
+            />
+            <div>
+              <p class="review-card__name">Дмитрий Козлов</p>
+              <p class="review-card__role">Готовит для семьи</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p class="review-card__text">
+            "Удобный поиск и фильтры по категориям. Легко найти что-то
+            конкретное, когда не знаешь что приготовить."
+          </p>
+          <div class="review-card__author">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80"
+              alt="Мария Смирнова"
+              class="review-card__avatar"
+            />
+            <div>
+              <p class="review-card__name">Мария Смирнова</p>
+              <p class="review-card__role">Любитель выпечки</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <p class="footer__logo">Вкусно<span>Дома</span></p>
+          <p class="footer__about">
+            Кулинарный сайт с проверенными рецептами для домашней кухни.
+            Готовьте вкусно каждый день.
+          </p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link">VK</a>
+            <a href="#" class="footer__social-link">TG</a>
+            <a href="#" class="footer__social-link">YT</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Разделы</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="recipes.html" class="footer__link">Рецепты</a></li>
+            <li><a href="account.html" class="footer__link">Кабинет</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Категории</p>
+          <ul class="footer__links">
+            <li><a href="recipes.html" class="footer__link">Завтраки</a></li>
+            <li><a href="recipes.html" class="footer__link">Супы</a></li>
+            <li><a href="recipes.html" class="footer__link">Основные блюда</a></li>
+            <li><a href="recipes.html" class="footer__link">Десерты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Контакты</p>
+          <ul class="footer__links">
+            <li><span class="footer__link">info@vkusnodoma.ru</span></li>
+            <li><span class="footer__link">+7 (999) 000-00-00</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 ВкусноДома. Все права защищены.</span>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет — ВкусноДома</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">Вкусно<span>Дома</span></a>
+        <nav class="nav nav--desktop">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Главная</a></li>
+            <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+            <li><a href="account.html" class="nav__link">Кабинет</a></li>
+            <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="btn btn--ghost hidden-mobile btn--logout">Выйти</button>
+          <button class="header__burger" aria-label="Меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="nav nav--mobile">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Главная</a></li>
+        <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+        <li><a href="account.html" class="nav__link">Кабинет</a></li>
+        <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="account-layout">
+
+        <!-- САЙДБАР -->
+        <aside class="account-sidebar">
+          <div class="account-sidebar__avatar-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+              alt="Аватар"
+              class="account-sidebar__avatar"
+              id="account-avatar"
+            />
+            <p class="account-sidebar__name">Пользователь</p>
+            <p class="account-sidebar__email">user@example.com</p>
+            <label for="avatar-input" style="margin-top:10px; cursor:pointer;">
+              <span class="btn btn--ghost" style="font-size:12px; padding:6px 14px;">Сменить фото</span>
+            </label>
+            <input type="file" id="avatar-input" accept="image/*" style="display:none;" />
+          </div>
+          <nav class="account-sidebar__nav">
+            <a href="#" class="account-nav__link account-nav__link--active" data-tab="overview">
+              <span class="account-nav__icon">&#128202;</span>
+              Обзор
+            </a>
+            <a href="#" class="account-nav__link" data-tab="profile">
+              <span class="account-nav__icon">&#128100;</span>
+              Профиль
+            </a>
+            <a href="#" class="account-nav__link" data-tab="saved">
+              <span class="account-nav__icon">&#9829;</span>
+              Сохранённые
+            </a>
+            <a href="#" class="account-nav__link" data-tab="history">
+              <span class="account-nav__icon">&#128336;</span>
+              История
+            </a>
+            <a href="#" class="account-nav__link btn--logout" style="margin-top:16px; color:#c0392b;">
+              <span class="account-nav__icon">&#10005;</span>
+              Выйти
+            </a>
+          </nav>
+        </aside>
+
+        <!-- КОНТЕНТ -->
+        <div class="account-content">
+
+          <!-- ПРИВЕТСТВИЕ -->
+          <div class="account-welcome">
+            <h2 class="account-welcome__title">Добро пожаловать!</h2>
+            <p class="account-welcome__text">Здесь вы можете управлять своим профилем и сохранёнными рецептами.</p>
+          </div>
+
+          <!-- ОБЗОР -->
+          <div class="account-tab" data-tab="overview">
+            <div class="account-card">
+              <h3 class="account-card__heading">Сохранённые рецепты</h3>
+              <div class="account-orders__list">
+                <div class="order-item">
+                  <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=200&q=80" alt="Паста карбонара" class="order-item__img" />
+                  <div class="order-item__info">
+                    <p class="order-item__title">Паста карбонара</p>
+                    <p class="order-item__date">Сохранено 10 мая 2025</p>
+                  </div>
+                  <span class="order-item__status order-item__status--saved">Сохранено</span>
+                </div>
+                <div class="order-item">
+                  <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&q=80" alt="Тирамису" class="order-item__img" />
+                  <div class="order-item__info">
+                    <p class="order-item__title">Тирамису</p>
+                    <p class="order-item__date">Сохранено 8 мая 2025</p>
+                  </div>
+                  <span class="order-item__status order-item__status--saved">Сохранено</span>
+                </div>
+                <div class="order-item">
+                  <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=80" alt="Греческий салат" class="order-item__img" />
+                  <div class="order-item__info">
+                    <p class="order-item__title">Греческий салат</p>
+                    <p class="order-item__date">Приготовлено 5 мая 2025</p>
+                  </div>
+                  <span class="order-item__status order-item__status--cooked">Приготовлено</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ПРОФИЛЬ -->
+          <div class="account-tab" data-tab="profile" style="display:none;">
+            <div class="account-card">
+              <h3 class="account-card__heading">Редактировать профиль</h3>
+              <form class="account-profile__form">
+                <div class="form__group">
+                  <label for="p-firstname" class="form__label">Имя</label>
+                  <input type="text" id="p-firstname" class="form__input" placeholder="Иван" />
+                </div>
+                <div class="form__group">
+                  <label for="p-lastname" class="form__label">Фамилия</label>
+                  <input type="text" id="p-lastname" class="form__input" placeholder="Иванов" />
+                </div>
+                <div class="form__group form__group--full">
+                  <label for="p-email" class="form__label">Электронная почта</label>
+                  <input type="email" id="p-email" class="form__input" placeholder="user@example.com" />
+                </div>
+                <div class="form__group form__group--full">
+                  <label for="p-about" class="form__label">О себе</label>
+                  <textarea id="p-about" class="form__input" rows="3" placeholder="Расскажите немного о себе..."></textarea>
+                </div>
+                <div class="form__group form__group--full" style="display:flex; justify-content:flex-end;">
+                  <button type="button" class="btn btn--primary" onclick="showToast('Изменения сохранены')">Сохранить изменения</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- СОХРАНЁННЫЕ -->
+          <div class="account-tab" data-tab="saved" style="display:none;">
+            <div class="account-card">
+              <h3 class="account-card__heading">Избранные рецепты</h3>
+              <div class="recipes__grid" style="margin-top:0;">
+                <article class="recipe-card">
+                  <div class="recipe-card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80" alt="Паста" class="recipe-card__img" />
+                  </div>
+                  <div class="recipe-card__body">
+                    <p class="recipe-card__category">Основные блюда</p>
+                    <h3 class="recipe-card__title">Паста карбонара</h3>
+                    <a href="recipes.html" class="btn btn--outline">Открыть</a>
+                  </div>
+                </article>
+                <article class="recipe-card">
+                  <div class="recipe-card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80" alt="Тирамису" class="recipe-card__img" />
+                  </div>
+                  <div class="recipe-card__body">
+                    <p class="recipe-card__category">Десерты</p>
+                    <h3 class="recipe-card__title">Тирамису</h3>
+                    <a href="recipes.html" class="btn btn--outline">Открыть</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- ИСТОРИЯ -->
+          <div class="account-tab" data-tab="history" style="display:none;">
+            <div class="account-card">
+              <h3 class="account-card__heading">История просмотров</h3>
+              <div class="account-orders__list">
+                <div class="order-item">
+                  <img src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=200&q=80" alt="Борщ" class="order-item__img" />
+                  <div class="order-item__info">
+                    <p class="order-item__title">Борщ классический</p>
+                    <p class="order-item__date">Просмотрено 11 мая 2025</p>
+                  </div>
+                </div>
+                <div class="order-item">
+                  <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=200&q=80" alt="Кекс" class="order-item__img" />
+                  <div class="order-item__info">
+                    <p class="order-item__title">Шоколадный кекс</p>
+                    <p class="order-item__date">Просмотрено 9 мая 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <p class="footer__logo">Вкусно<span>Дома</span></p>
+          <p class="footer__about">Кулинарный сайт с проверенными рецептами для домашней кухни.</p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Разделы</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="recipes.html" class="footer__link">Рецепты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Помощь</p>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Поддержка</a></li>
+            <li><a href="#" class="footer__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Контакты</p>
+          <ul class="footer__links">
+            <li><span class="footer__link">info@vkusnodoma.ru</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 ВкусноДома. Все права защищены.</span>
+        <span>Учебный проект</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Функция showToast доступна глобально через main.js,
+    // но для inline-вызовов из HTML перебрасываем:
+    window.showToast = function(msg) {
+      const t = document.createElement('div');
+      t.style.cssText = 'position:fixed;bottom:24px;right:24px;background:#1c1c1c;color:#fff;padding:14px 24px;border-radius:8px;font-family:Raleway,sans-serif;font-size:14px;font-weight:500;box-shadow:0 8px 32px rgba(0,0,0,.2);z-index:9999;border-left:4px solid #c0392b;';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => { t.style.opacity='0'; t.style.transition='opacity .3s'; setTimeout(()=>t.remove(),300); }, 2500);
+    };
+  </script>
+</body>
+</html>

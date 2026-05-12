@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рецепты — ВкусноДома</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">Вкусно<span>Дома</span></a>
+        <nav class="nav nav--desktop">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Главная</a></li>
+            <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+            <li><a href="account.html" class="nav__link">Кабинет</a></li>
+            <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a href="registration.html" class="btn btn--primary hidden-mobile">Войти</a>
+          <button class="header__burger" aria-label="Меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="nav nav--mobile">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Главная</a></li>
+        <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+        <li><a href="account.html" class="nav__link">Кабинет</a></li>
+        <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__content container">
+      <h1 class="page-hero__title">Все рецепты</h1>
+      <p class="page-hero__breadcrumb">
+        <a href="index.html">Главная</a> / Рецепты
+      </p>
+    </div>
+  </section>
+
+  <!-- ФИЛЬТРЫ -->
+  <div class="filters">
+    <div class="container">
+      <div class="filters__inner">
+        <span class="filters__label">Категория:</span>
+        <button class="filter-btn is-active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="zavtrak">Завтраки</button>
+        <button class="filter-btn" data-filter="sup">Супы</button>
+        <button class="filter-btn" data-filter="main">Основные</button>
+        <button class="filter-btn" data-filter="desert">Десерты</button>
+        <button class="filter-btn" data-filter="salat">Салаты</button>
+
+        <div class="filters__search">
+          <span class="filters__search-icon">&#128269;</span>
+          <input
+            type="text"
+            class="filters__search-input"
+            placeholder="Поиск по рецептам..."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- СПИСОК РЕЦЕПТОВ -->
+  <main class="section">
+    <div class="container">
+      <div class="recipes__grid">
+
+        <article class="recipe-card" data-category="main">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Паста карбонара" class="recipe-card__img" />
+            <span class="recipe-card__badge">Хит</span>
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Основные блюда</p>
+            <h3 class="recipe-card__title">Паста карбонара</h3>
+            <p class="recipe-card__desc">Классический итальянский рецепт с яйцами, сыром пекорино и гуанчале.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>25 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>2 порции</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.9</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="sup">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=600&q=80" alt="Борщ" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Супы</p>
+            <h3 class="recipe-card__title">Борщ классический</h3>
+            <p class="recipe-card__desc">Наваристый борщ со свёклой, капустой, картофелем и говядиной.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>90 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>6 порций</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.8</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="desert">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="Шоколадный кекс" class="recipe-card__img" />
+            <span class="recipe-card__badge">Новинка</span>
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Десерты</p>
+            <h3 class="recipe-card__title">Шоколадный кекс</h3>
+            <p class="recipe-card__desc">Влажный шоколадный кекс с хрустящей корочкой и нежной серединой.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>40 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>8 порций</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.7</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="zavtrak">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80" alt="Овсяная каша" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Завтраки</p>
+            <h3 class="recipe-card__title">Овсяная каша с ягодами</h3>
+            <p class="recipe-card__desc">Питательный завтрак за 10 минут. Овсянка с мёдом, ягодами и орехами.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>10 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>1 порция</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.6</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="salat">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Греческий салат" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Салаты</p>
+            <h3 class="recipe-card__title">Греческий салат</h3>
+            <p class="recipe-card__desc">Свежие овощи, маслины, сыр фета и оливковое масло — легко и полезно.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>15 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>2 порции</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.8</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="main">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=600&q=80" alt="Куриные котлеты" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Основные блюда</p>
+            <h3 class="recipe-card__title">Куриные котлеты</h3>
+            <p class="recipe-card__desc">Нежные котлеты из куриного фарша с зеленью и чесноком. Просто и вкусно.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>35 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>4 порции</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.7</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="desert">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Тирамису" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Десерты</p>
+            <h3 class="recipe-card__title">Тирамису</h3>
+            <p class="recipe-card__desc">Нежный итальянский десерт с маскарпоне, кофе и печеньем савоярди.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>30 мин + 4ч</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>6 порций</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>5.0</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="sup">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80" alt="Томатный суп" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Супы</p>
+            <h3 class="recipe-card__title">Томатный крем-суп</h3>
+            <p class="recipe-card__desc">Бархатный суп-пюре из запечённых томатов с базиликом и сливками.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>45 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>4 порции</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.6</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="recipe-card" data-category="zavtrak">
+          <div class="recipe-card__img-wrap">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Яичница" class="recipe-card__img" />
+          </div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__category">Завтраки</p>
+            <h3 class="recipe-card__title">Яичница с овощами</h3>
+            <p class="recipe-card__desc">Быстрый и сытный завтрак из яиц с болгарским перцем и помидорами.</p>
+            <div class="recipe-card__meta">
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128336;</span>10 мин</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#128100;</span>1 порция</span>
+              <span class="recipe-card__meta-item"><span class="recipe-card__meta-icon">&#11088;</span>4.5</span>
+            </div>
+            <a href="#" class="btn btn--outline">Подробнее</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ПАГИНАЦИЯ -->
+      <nav class="pagination" aria-label="Пагинация">
+        <button class="pagination__btn is-active" data-page="1">1</button>
+        <button class="pagination__btn" data-page="2">2</button>
+        <button class="pagination__btn" data-page="3">3</button>
+        <button class="pagination__btn" data-page="4">...</button>
+      </nav>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <p class="footer__logo">Вкусно<span>Дома</span></p>
+          <p class="footer__about">Кулинарный сайт с проверенными рецептами для домашней кухни.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link">VK</a>
+            <a href="#" class="footer__social-link">TG</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Разделы</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Главная</a></li>
+            <li><a href="recipes.html" class="footer__link">Рецепты</a></li>
+            <li><a href="account.html" class="footer__link">Кабинет</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Категории</p>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Завтраки</a></li>
+            <li><a href="#" class="footer__link">Супы</a></li>
+            <li><a href="#" class="footer__link">Основные блюда</a></li>
+            <li><a href="#" class="footer__link">Десерты</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Контакты</p>
+          <ul class="footer__links">
+            <li><span class="footer__link">info@vkusnodoma.ru</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 ВкусноДома. Все права защищены.</span>
+        <span>Учебный проект</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

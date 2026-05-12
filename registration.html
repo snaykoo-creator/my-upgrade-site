@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация — ВкусноДома</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">Вкусно<span>Дома</span></a>
+        <nav class="nav nav--desktop">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Главная</a></li>
+            <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+            <li><a href="account.html" class="nav__link">Кабинет</a></li>
+            <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="header__burger" aria-label="Меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="nav nav--mobile">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Главная</a></li>
+        <li><a href="recipes.html" class="nav__link">Рецепты</a></li>
+        <li><a href="account.html" class="nav__link">Кабинет</a></li>
+        <li><a href="registration.html" class="nav__link">Регистрация</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ФОРМА РЕГИСТРАЦИИ -->
+  <main class="auth-page">
+    <div class="auth-card">
+      <p class="auth-card__logo">Вкусно<span>Дома</span></p>
+      <h1 class="auth-card__title">Регистрация</h1>
+      <p class="auth-card__subtitle">Создайте аккаунт и сохраняйте любимые рецепты</p>
+
+      <form class="registration-form" novalidate>
+
+        <div class="form__group">
+          <label for="username" class="form__label">Имя пользователя</label>
+          <input
+            type="text"
+            id="username"
+            class="form__input"
+            placeholder="Например, Мария_Повар"
+            autocomplete="username"
+          />
+          <span class="form__error" id="username-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="email" class="form__label">Электронная почта</label>
+          <input
+            type="email"
+            id="email"
+            class="form__input"
+            placeholder="example@mail.ru"
+            autocomplete="email"
+          />
+          <span class="form__error" id="email-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="password" class="form__label">Пароль</label>
+          <input
+            type="password"
+            id="password"
+            class="form__input"
+            placeholder="Не менее 6 символов"
+            autocomplete="new-password"
+          />
+          <span class="form__error" id="password-error"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="password2" class="form__label">Подтверждение пароля</label>
+          <input
+            type="password"
+            id="password2"
+            class="form__input"
+            placeholder="Повторите пароль"
+            autocomplete="new-password"
+          />
+          <span class="form__error" id="password2-error"></span>
+        </div>
+
+        <div class="form__group">
+          <div class="form__checkbox-wrap">
+            <input type="checkbox" id="agree" class="form__checkbox" />
+            <label for="agree" class="form__checkbox-label">
+              Я принимаю <a href="#">условия обработки персональных данных</a>
+              и соглашаюсь с <a href="#">политикой конфиденциальности</a>
+            </label>
+          </div>
+          <span class="form__error" id="agree-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary auth-card__btn">
+          Зарегистрироваться
+        </button>
+      </form>
+
+      <p class="auth-card__footer">
+        Уже есть аккаунт? <a href="account.html">Войти</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
